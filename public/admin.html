@@ -1,0 +1,119 @@
+ <!-- add new user form -->
+ <form action="/admin" method="post" class="col s6 addForm" id="loginform">
+  <div class="row">
+<div class="col-3"><div class="row">
+  <div class="input-field">
+    <input type="text" name="department" required>
+    <label for="department">department</label>
+  </div>
+  </div></div>
+<div class="col-3"><div class="row">
+  <div class="input-field">
+    <input type="text" name="name"  required>
+    <label for="name">Student name</label>
+  </div>
+  </div></div>
+<div class="col-3"> <div class="row">
+          
+  <div class="input-field">
+    <input class="regNumber" type="regNumber" name="regNumber"
+      placeholder="FORMAT : YEAR/LEVEL/DEPARTMENT/NUMBER" required>
+    
+  </div>
+  </div></div>
+<div class="col-3"><div class="row">
+  <div class="input-field">
+    <input type="password" name="password"  required>
+    <label for="password">password</label>
+  </div>
+  </div></div>
+  </div>
+      
+ <div class="row"><input type="submit" value="enter"></div>
+      </form>
+
+      <!-- get all users form -->
+          <form action="/admin/getAUser" method="POST" class="col s6 getAUserForm" id="loginform">
+               <div class="row"> 
+              <div class="input-field">
+                <input class="regNumber" type="regNumber" name="regNumber"
+                  placeholder="FORMAT : YEAR/LEVEL/DEPARTMENT/NUMBER" required> 
+              </div>
+              </div>
+               <div class="row">
+              <div class="input-field">
+                <input type="password" name="password"  required>
+                <label for="password">password</label>
+              </div>
+              </div>
+         <div class="row"><input type="submit" value="enter"></div>
+              </form>
+
+<!-- admin contestants image uploader -->
+              <form action="/admin/mutter" method="POST"  enctype="multipart/form-data" id="imageUpload">
+                <div class="file-field input-field">
+                  <div class="btn grey">
+                    <span>file</span>
+                    <input name="my" type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path-validate" type="text"> 
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger">submit</button>
+                </form>        
+
+
+
+  <!-- add contestants name form -->
+                <form action="/admin/contestantsnames" method="post" class="col s6 contestantsnames" id="addcontestantsname">
+                  <div class="row">
+                <div class="col-3"><div class="row">
+                  <div class="input-field">
+                    <input type="text" name="FirstContestant" required>
+                    <label for="FirstContestant">FirstContestant</label>
+                  </div>
+                  </div></div>
+                <div class="col-3"><div class="row">
+                  <div class="input-field">
+                    <input type="text" name="SecondContestant"  required>
+                    <label for="SecondContestant">SecondContestant</label>
+                  </div>
+                  </div></div>
+                <div class="col-3">
+                   <div class="row">
+                  <div class="input-field">
+                    <input type="text" name="ThirdContestant"  required>
+                    <label for="ThirdContestant">ThirdContestant</label>
+                  </div>
+                  </div>
+                </div>
+              
+                <div class="col-3">
+                  <div class="row">
+                  <div class="input-field">
+                    <input type="text" name="FourthContestant"  required>
+                    <label for="FourthContestant">FourthContestant</label>
+                  </div>
+                  </div>
+                </div>
+                  </div>
+                      
+                 <div class="row"><input type="submit" value="enter"></div>
+                      </form>
+
+
+                      <!-- add voting dates form -->
+                      <form action="/admin/voteDates" method="POST" id="addDatesVote">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label for="voingDate">voing Date</label>
+                            <input type="text" name="votingDate" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="closingDate">closing Date</label>
+                              <input type="text" name="closingDate" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-info btn-danger ">submit</button>
+                        </form>        

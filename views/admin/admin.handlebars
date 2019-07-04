@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="jumbotron mt-1">
+        <h2 class=" bg-success text-danger center adminDashboard">ADMIN DASHBOARD</h2>
+<div class="row adminDiv">
+
+    <div class="col-md-4 col-sm-4 ">
+<button class="btn blue mt-2 ml-4" id="addUser">Add new voter</button>
+    </div>
+    
+    <div class="col-md-4 col-sm-4">
+<a href="/admin/Users"><button class="btn green ml-5 mt-2"> get voters</button></a>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <button class="btn yellow ml-5 mt-2" id="getAUser"> get a voter</button>
+    </div>
+    </div>
+    <div class="row adminDiv">
+        <div class="col-md-4 col-sm-4">
+            
+<button class="btn green ml-5 mt-2" id="uploadImage"> upload</button>
+    
+        </div>
+        <div class="col-md-4 col-sm-4">
+           
+<button class="btn green ml-5 mt-2" id="addVoteDates"> addVoteDATES</button>
+    
+        </div>
+        <div class="col-md-4 col-sm-4">
+           
+<button class="btn green ml-5 mt-2" id="addcontestantsname"> contestantsnames</button>
+    
+        </div>
+    </div>
+       
+  
+   <a class="btn btn-primary btn-lg mt-1 right ml-3" href="/vote" role="button">vote</a>
+<a class="btn btn-primary btn-lg mt-1 right" href="/" role="button">Home</a>
+    </div>
+ <button id="put">put</button>
+</div>
+{{!-- user/voter from '/admin/getAUser route post' --}}
+{{#if voter}}
+<div class="card">
+    <h4>{{voter.name}}</h4>
+
+  <h4> {{voter.password}}</h4> 
+</div>
+{{else}}
+{{/if}}
+{{!-- err message from '/admin/getAUser route post' --}}
+<h4>{{err}}</h4>
+<div class="row" id="adminDiv">    
+    </div>

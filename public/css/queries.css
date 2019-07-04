@@ -1,0 +1,88 @@
+@media only screen and (max-width : 480px){
+.voteForm{
+    display: block;
+}
+
+.aboutP{
+    font-size: 14px;
+}
+#main-menu{
+    width: 65%;
+}
+/* #iconlogout{
+    display: none;
+}
+.navuls{
+    font-size: 8px;
+} */
+.voteScoresDiv{
+    display: block;
+}
+}
+
+/* maximum of 767 width and above */
+@media only screen and (max-width : 767px){
+   .indexHeadings{
+       font-size: 18px;
+   }
+   .adminul{
+    display: none;
+}
+.voteHeadings{
+    font-size: 20px;
+    margin-left: 20%;
+    word-spacing: 10px;
+}
+.voteH5{
+    font-size: 15px;
+    word-spacing: 5px;
+}
+/* .voteDetailsImg{
+    width: 100px;
+    height: 70px;
+    display: block;
+} */
+.noVoteYet{
+    font-size: 20px;
+   
+}
+
+/* .voteDetailstable{
+   
+    float: right;
+} */
+.aspirantsInformationButton{
+  display: none;
+}
+
+.scoresContainer{
+    float: right;
+}
+.adminDashboard{
+    font-size: 20px;
+    width: 70%;
+    margin-left: 30px;
+}
+.adminDiv button {
+   font-size: 12px;
+}
+}
+
+@media only screen and (max-width : 1023px){
+    .aboutImg{
+        width: 140%;
+        height: 100%;
+    }
+    .about {
+        font-size:20px;
+       
+        } 
+        #Magic{
+            display:  none
+        }
+       
+}
+
+@media only screen and (max-width : 1200px){
+   
+}

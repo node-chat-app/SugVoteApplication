@@ -1,0 +1,20 @@
+{{#if success_msg}}
+<div id="success_msg"  class="ml-3 mb-3" style="height :1.5vh;"><h6 class="white-text">
+  {{success_msg}}</h6>
+</div>
+{{/if}}
+
+{{#if error_msg}}
+<div id="error_msg" class="ml-3 mb-3" style="height : 1.5vh;" class="">
+  <h6 class="yellow-text">
+  {{error_msg}}</h6></div>
+{{/if}}
+
+{{#if error}}
+<div id="error_msg" class="ml-3 mb-2" style="height : 1vh;"><h6 class="green-text">
+  {{error}}</h6></div>
+{{/if}}
+{{!-- vote handlebars error msg --}}
+{{#if errors}}
+ {{#each errors}}<h6 style="color : yellow;">{{text}}</h6>{{/each}}
+{{/if}}

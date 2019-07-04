@@ -1,0 +1,51 @@
+ body{
+   background-color:brown;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+ main{
+   flex: 1 0 auto;
+ }
+.side-nav{
+  background-color: paleturquoise;
+}
+#main-menu{
+  height: 90%;
+}
+.userLoginForm{
+  margin-left: 50px;
+}
+/* #homeDiv{
+  background-image: url('../img/img2.jpg');
+  background-size:100% 
+} */
+
+.alert alert-success{
+  margin-bottom: 50%;
+}
+#loginform{
+  width: 30%;
+}
+/* login regnumber form field  */
+.regNumber{
+  height: 50px;
+  width: 100.5%;
+}
+/* change password form class */
+.changeP{
+  width:50%;
+}
+/* change password submit button */
+#submitButton:hover{
+border: 4px solid yellow;
+}
+/* change password regnumber field */
+.changePasswordRegNumberForm{
+  height: 50px;
+  width: 380px;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+

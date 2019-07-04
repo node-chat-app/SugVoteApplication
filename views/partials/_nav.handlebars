@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm navbar-dark grey darken-3 mb-3">
+  <div class="container">
+    <a href="#" class="navbar-brand">
+      <button class="narbar-nav btn btn-success navuls" type="button"><b></b>S.U.G VOTING</b></button></a>
+    <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon bg-success"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+       
+       {{#if user}}
+       
+<ul class="navbar-nav"> <a href="#" data-activates="main-menu" class="navbar-link button-collapse show-on-large mr-3">Vote Records</a></ul>
+     
+      <ul class="side-nav" id="main-menu">
+        <h5 style="color :green;" class="ml-4">View Contestant's Details</h5>
+
+        <li><a class="btn red darken-1" id="sindNavLi" href="/contestants/george">first contestants votes</a></li>
+        <li><a  class="btn green darken-1" id="sindNavLi" href="/contestants/pascal">second contestants votes</a></li>
+        <li><a class="btn red darken-1" id="sindNavLi" href="/contestants/chijioke">third contestants votes</a></li>
+        <li><a class="btn green darken-1" id="sindNavLi" href="/contestants/esther">fourth contestants votes</a></li>
+        <li><a class="btn red darken-1" id="sindNavLi" href="/logout"><i class="fa fa-sign-out " id="iconlogout"></i> Logout</a></li>
+        <li><a class="btn red darken-1" id="sindNavLi" href="/changePassword">change</a></li>
+      </ul>
+
+
+       <ul class="navbar-nav ml-auto">
+       <li class="nav-item dropdown " >
+        <a href="#" class="nav-link dropdown-toggle text-center text-white" data-toggle="dropdown" id="navbarDropdownMenuLink">links</a>
+        <div class="dropdown-menu bg-success">
+           <a class="dropdown-item text-right" href="/vote"><u>vote</u></a>
+        
+          <a class="dropdown-item text-right" href="/logout"><u><ion-icon name="power"></ion-icon>logout</u></a>
+        
+          {{#if user.isAdmin}}
+<a class="dropdown-item text-right" href="/admin"><i class="fa fa-book"></i> admin Panel </a>   
+      {{/if}}
+            </div>
+       </li>
+       </ul>
+      {{else}}
+    <ul class="navbar-nav">
+<li class="nav-item ml-3" id="howItWork"><i class="fa fa-info" aria-hidden="true"></i>guidelines 
+        </li>
+      </ul>
+<ul class="navbar-nav ml-auto">
+   <li class="nav-item" id="userLogin"><ion-icon name="arrow-round-back"></ion-icon> Login </li>
+</ul>
+      {{/if}}
+     
+    </div>
+   
+  </div>
+  
+</nav>

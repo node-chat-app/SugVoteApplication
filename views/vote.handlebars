@@ -1,0 +1,192 @@
+   <h2 class="page-header voteHeadings font-italic text-white mt-0">Imopoly SUG Presidnetial Election</h2> 
+<div class="row">
+  <div class="col-md-4">
+    <p class="display-block"> 
+  <button class="btn btn-danger mt-2 " type="button" data-toggle="collapse"
+   data-target=".multi-collapse" aria-expanded="false"
+   aria-controls="multiCollapseExample1 multiCollapseExample2"><ion-icon name="power"></ion-icon><span class="aspirantsInformationButton">  Aspirants information</span></button>
+</p>
+  </div>
+  <div class="col-md-8">
+   <h4 class=" text-success mt-0"> {{users}} students are accredited for voting</h3>
+   <h4 class="text-success">{{votes}} has voted  {{leftVoter}}  remaining</h4>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body bg-primary">
+       <div class="row">
+         <div class="col-4"><img src="/img/first.jpg" width="40" height="40"></div>
+         <div class="col-8">{{firstcontestants}}</div>
+       </div>
+       <ul >
+         <li>State of origin : Abia state</li>
+         <li>Department      : Statistics</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 3.33</li>
+         <LI>Religion  : Christianity</LI>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body bg-info">
+        <div class="row">
+         <div class="col-4"><img src="/img/second.jpg" width="40" height="40"></div>
+         <div class="col-8">{{secondcontestants}}</div>
+       </div>
+        
+       <ul>
+         <li>State of origin : Imo state</li>
+         <li>Department      : Computer science</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 3.56</li>
+         <LI>Religion  : Christianity</LI>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body  bg-success">
+         <div class="row">
+         <div class="col-4"><img src="/img/third.jpg" class="display-inline" width="40" height="40"></div>
+         <div class="col-8">{{thirdcontestants}}</div>
+       </div>
+       
+       <ul>
+         <li>State of origin : Edo state</li>
+         <li>Department      : Animal science</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 4.0</li>
+         <LI>Religion  : Christianity</LI>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body  bg-danger">
+        <div class="row">
+         <div class="col-4"><img src="/img/fourth.jpg" class="display-inline" width="40" height="40"></div>
+         <div class="col-8">{{fourthcontestants}}</div>
+       </div>
+       
+       <ul>
+         <li>State of origin : Kano state</li>
+         <li>Department      : Statistics</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 3.89</li>
+         <LI>Religion  : Muslem</LI>
+       </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+   <div class="row">
+     <div class="col-12 center">
+<marquee class="m-auto text-info marquee"  bgcolor="yellow" width="80%" > 
+  <span class="mr-5 marqueespann">vote for credibility </span> 
+  <span class="mr-5 marqueespann">make your voice heard</span>
+  voting ends on :{{closingDate}}/{{closingDateMonth}}/{{closingDateYear}} 
+  <span class="ml-5">
+    {{daysleft}}
+    
+     days left
+
+  
+  </marquee>
+   
+     </div>
+   </div>
+   
+
+
+   <hr>
+<h5 class="text-success voteH5">{{user.name}} Who do you vote to be the next imopoly SUG President ?</h5>
+
+</div>
+<hr>
+<form id="vote-form " class="mb-0" method="POST" action="/vote">
+  <div class="row voteForm">
+    <div class="col-3">
+    <input type="radio" name="sug" id="George" value="George">
+    <label for="George">{{firstcontestants}}</label>
+    <img src="/img/first.jpg" width="75" height="70">
+</div>
+<div class="col-3">
+    <input type="radio" name="sug" id="Pascals" value="Pascals">
+    <label for="Pascals">{{secondcontestants}}</label>
+    <img src="/img/second.jpg" width="75" height="70">
+  </div>
+    <div class="col-3">
+    <input type="radio" name="sug" id="Chijioke" value="Chijioke">
+    <label for="Chijioke">{{thirdcontestants}}</label>
+     <img class="img-circle" src="/img/third.jpg" width="75" height="70">
+ </div>
+ <div class="col-3">
+    <input type="radio" name="sug" id="Esther" value="Esther">
+    <label for="Esther">{{fourthcontestants}}</label>
+    <img src="/img/fourth.jpg" width="75" height="70">
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+<input type="submit" value="VOTE" class="btn btn-success bg-success">
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+
+    </div>
+  </div>
+</form>
+
+<form method="post" action="/vote/delete?_method=DELETE">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" class=" btn " value="UNVOTE">
+</form>
+
+<br>
+<br>
+
+
+{{!-- <form action="/vote/mailer" method="post">
+  <div class="row">
+<div class="col-3"><div class="row">
+  <div class="input-field">
+    <input type="text" name="department" required>
+    <label for="department">department</label>
+  </div>
+  </div></div>
+<div class="col-3"><div class="row">
+  <div class="input-field">
+    <input type="text" name="name"  required>
+    <label for="name">Student name</label>
+  </div>
+  </div></div>
+<div class="col-3"> <div class="row">
+          
+  <div class="input-field">
+    <input class="regNumber" type="regNumber" name="regNumber"
+      placeholder="FORMAT : YEAR/LEVEL/DEPARTMENT/NUMBER" required>
+    
+  </div>
+  </div></div>
+<div class="col-3"><div class="row">
+  <div class="input-field">
+    <input type="password" name="password"  required>
+    <label for="password">password</label>
+  </div>
+  </div></div>
+  </div>
+      
+ <div class="row"><input type="submit" value="enter"></div>
+      </form> --}}
+
+<div  id="chartContainer"  style="height: 300%; width:100%"></div>
+

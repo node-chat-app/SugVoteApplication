@@ -1,0 +1,40 @@
+<div class="card ml-5 bg-primary">
+   <h3 style="color: chartreuse; margin-left:15%"  >Total number of voters =  {{users.length}} </h3>
+   </div>
+   <div class="container">
+<table class="table">
+  
+<thead class="text-danger bg-info"><tr>
+  <th scope="col">Name of voter</th>
+<th scope="col">voter department</th>
+<th scope="col">voter reg number</th>
+<th scope="col">voter password</th>
+<th scope="col">Status</th>
+<th scope="col"></th>
+</tr></thead>
+<ul>
+{{#each users}}
+<tbody>
+<tr>
+  <td class="green">
+  {{name}}
+</td>
+<td class="purple">{{department}}</td>
+<td class="green">{{regNumber}}</td>
+<td class="purple">{{password}}</td>
+<td class="green">{{isAdmin}}</td>
+<td class="green"><form method="post" action="/admin/Users/delete/{{id}}?_method=DELETE">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" class="btn btn-xm" value="delete">
+</form></td>
+</tr>
+
+</tbody>
+
+{{else}}
+
+{{/each}}
+
+</table>
+
+</div>

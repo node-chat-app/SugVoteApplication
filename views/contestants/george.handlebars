@@ -1,0 +1,172 @@
+<main></main>
+
+<div class="row voteScoresDiv">
+<div class="col-md-3 col-sm-4 col-xm-3">
+<img class="left voteDetailsImg mt-5" src="/img/first.jpg" width="150" height="200">
+
+</div>
+
+<div class="col-md-7 col-sm-8 col-xm-7">
+
+{{#if vote}}
+<h2 class="center  blue-text">{{first}}'s Votes </h2>
+<table class="table blue-text">
+  
+<thead class="text-danger bg-info"><tr>
+  <th scope="col">Name of voter</th>
+<th scope="col">voter reg number</th>
+<th scope="col">voter department</th>
+</tr></thead>{{#each vote}}
+<tbody>
+<tr>
+<td>
+  {{voterName}}
+</td>
+<td>{{voterRegnumber}}</td>
+<td>{{voterDepartment}}</td>
+</tr>
+
+</tbody>
+{{else}}
+
+{{/each}}
+
+</table>
+</div>
+<div class="col-md-1 col-sm-0 col-xm-1"></div>
+
+</div>
+  
+
+
+<div class="center blue-text"><h2 >{{first}} got a total of   {{vote.length}} votes</h2></div>
+
+
+{{else}}
+<div class="center"><h2 class="green-text noVoteYet">{{first}} HAS NO VOTE YET</h2></div>
+
+{{/if}}
+
+
+
+</main>
+
+
+<footer class="page-footer brown darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">VotingApllication</h5>
+        <p class="grey-text text-lighten-4">your vote is your power</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="green-text"><a href="/vote">VOTE</a></h5>
+        <ul>
+          <li><a class="blue-text text-lighten-3" href="https://youtube.com"><i class="fa fa-address-book-o" aria-hidden="true">youtube</i></a></li>
+          <li><a class="grey-text text-lighten-3" href="https://facebook.com"><i class="fa fa-facebook" aria-hidden="true">facebook</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      online votePollApplication votePollApp developed by George Nwagbara a.k.a BlackHandsome
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <main></main>
+<div class="left">
+  <img class="left voteDetailsImg" src="/img/first.jpg" width="150" height="200">
+</div>
+{{#if vote}}
+<div class="container">
+<h2 class="center  blue-text voteDetailsH2">{{first}}'s Votes </h2>
+<div class="container">
+
+<table class="table blue-text voteDetailstable">
+  
+<thead><tr>
+  <th scope="col">Name of voter</th>
+<th scope="col">voter reg number</th>
+<th scope="col">voter department</th>
+</tr></thead>{{#each vote}}
+<tbody>
+<tr>
+<td>
+  {{voterName}}
+</td>
+<td>{{voterRegnumber}}</td>
+<td>{{voterDepartment}}</td>
+</tr>
+
+</tbody>
+{{else}}
+
+{{/each}}
+
+</table>
+<div class="center blue-text"><h2 >{{first}} got a total of   {{vote.length}} votes</h2></div>
+</div>
+</div>
+{{else}}
+<div class="center"><h2 class="green-text noVoteYet">George HAS NO VOTE YET</h2></div>
+
+{{/if}}
+
+
+
+</main>
+
+
+<footer class="page-footer brown darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">VotingApllication</h5>
+        <p class="grey-text text-lighten-4">your vote is your power</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="green-text"><a href="/vote">VOTE</a></h5>
+        <ul>
+          <li><a class="blue-text text-lighten-3" href="https://youtube.com"><i class="fa fa-address-book-o" aria-hidden="true">youtube</i></a></li>
+          <li><a class="grey-text text-lighten-3" href="https://facebook.com"><i class="fa fa-facebook" aria-hidden="true">facebook</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      online votePollApplication votePollApp developed by George Nwagbara a.k.a BlackHandsome
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
+
+
+ --}}
