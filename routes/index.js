@@ -15,15 +15,20 @@ router.get('/', (req,res) => {
   VoteDates.findOne()
   .sort({date :'desc'})
   .then(dates =>{
-    var begin = new Date(dates.votingDate);
-    var electionYear = new Date();
-    var year = electionYear.getFullYear();
-    res.render( 'index',{
-      votingDay : begin.getDate(),
-      votingMonth : begin.getMonth() +1 ,
-      votingYear : begin.getFullYear(),
-  year : year
-    });
+    if(dates){
+      var begin = new Date(dates.votingDate);
+      var electionYear = new Date();
+      var year = electionYear.getFullYear();
+      res.render( 'index',{
+        votingDay : begin.getDate(),
+        votingMonth : begin.getMonth() +1 ,
+        votingYear : begin.getFullYear(),
+    year : year
+      });
+    }else{
+res.render('index');
+    }
+   
   })
     
  
