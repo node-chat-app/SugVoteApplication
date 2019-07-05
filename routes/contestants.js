@@ -6,7 +6,7 @@ const Vote = require('../model/vote');
 
 const Contestants = require ('../model/cotestantsNames')
 
-router.get('/George', ensureAuthenticated,(req, res) =>{
+router.get('/george', ensureAuthenticated,(req, res) =>{
   Vote.find({
     sug:'George'
     }).sort({date:'desc'})

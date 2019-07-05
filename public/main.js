@@ -55,7 +55,7 @@ fetch('http://localhost:3000/vote/result')
     // Enable pusher logging - don't include this in production
     pusher.logToConsole = true;
   
-    var pusher = new pusher('3f4d26e83aa58f641cd5', {
+    var pusher = new Pusher('3f4d26e83aa58f641cd5', {
       cluster: 'eu',
       forceTLS: true
     });
