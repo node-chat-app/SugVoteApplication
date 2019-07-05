@@ -15,7 +15,7 @@ router.get('/george', ensureAuthenticated,(req, res) =>{
       Contestants.findOne({})
       .sort({date :'desc'})
       .then(Contestant =>{
-        res.render('contestants/George', {
+        res.render('contestants/george', {
           first :Contestant.FirstContestant,
           vote: vote
         })
