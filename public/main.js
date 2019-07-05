@@ -17,7 +17,7 @@
 
 //   e.preventDefault();
 // });
-fetch('http://localhost:3000/vote/result')
+fetch('https://scenic-lassen-volcanic-49836.herokuapp.com/vote/result')
 .then(res => res.json())
 .then(data => {
   const votes = data.Votes;
