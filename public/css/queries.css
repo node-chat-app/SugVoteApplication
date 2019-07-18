@@ -1,4 +1,4 @@
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 575px){
 .voteForm{
     display: block;
 }
@@ -17,6 +17,9 @@
 } */
 .voteScoresDiv{
     display: block;
+}
+#navbarNav{
+    background-color:lightblue;
 }
 }
 
@@ -66,6 +69,7 @@
 .adminDiv button {
    font-size: 12px;
 }
+
 }
 
 @media only screen and (max-width : 1023px){

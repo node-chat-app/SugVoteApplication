@@ -107,9 +107,6 @@ Vote.find()
      thirdcontestants : Contestant.ThirdContestant,
      fourthcontestants : Contestant.FourthContestant,
 
-
-      daysleft : end.getDate() - today.getDate(),
-       
  closingDate : closingDate,
  closingDateMonth : endMonth,
  closingDateYear : closingDateYear
@@ -191,15 +188,14 @@ router.delete('/delete', (req, res) =>{
 router.post('/', (req, res) => {
   let errors = [];
   if(req.body.sug == undefined){
-    errors.push({text : 'choose a candidate'});
+    errors.push('choose a candidate');
   } 
   if(req.user.isAdmin) {
-    errors.push({text : 'Admin are not allowed to vote'});
+    errors.push('Admin are not allowed to vote');
   }
   if(errors.length  > 0 ){
-    res.render('vote',{
-errors : errors
-    })
+    req.flash('error_msg',  `${errors}\n`  )
+    res.redirect('/vote')
   }
   else{
     Vote.findOne({id : req.user.id})

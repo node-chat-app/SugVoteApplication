@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-md-4">
     <p class="display-block"> 
-  <button class="btn btn-danger mt-2 " type="button" data-toggle="collapse"
+  <button class="btn  mt-2 " type="button" data-toggle="collapse"
    data-target=".multi-collapse" aria-expanded="false"
    aria-controls="multiCollapseExample1 multiCollapseExample2"><ion-icon name="power"></ion-icon><span class="aspirantsInformationButton">  Aspirants information</span></button>
 </p>
@@ -93,15 +93,8 @@
 <marquee class="m-auto text-info marquee"  bgcolor="yellow" width="80%" > 
   <span class="mr-5 marqueespann">vote for credibility </span> 
   <span class="mr-5 marqueespann">make your voice heard</span>
-  voting ends on :{{closingDate}}/{{closingDateMonth}}/{{closingDateYear}} 
-  <span class="ml-5">
-    {{daysleft}}
-    
-     days left
-
-  
+  <span class="text-danger">voting ends on :{{closingDate}}/{{closingDateMonth}}/{{closingDateYear}} </span>
   </marquee>
-   
      </div>
    </div>
    
@@ -136,14 +129,11 @@
   </div>
   </div>
   
-  <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6">
+ 
+    <div class="mb-2">
 <input type="submit" value="VOTE" class="btn btn-success bg-success">
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-6">
-
-    </div>
-  </div>
+  
 </form>
 
 <form method="post" action="/vote/delete?_method=DELETE">

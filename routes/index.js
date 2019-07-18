@@ -30,8 +30,6 @@ res.render('index');
     }
    
   })
-    
- 
   });
 
       router.post('/login', (req, res, next) => {
