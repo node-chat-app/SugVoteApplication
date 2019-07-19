@@ -102,7 +102,7 @@ router.delete('/Users/delete/:id', (req, res) => {
 });
 
 router.post('/getAUser', (req, res) =>{
-  if (req.user.isAdmin = true){
+  if (req.user.isAdmin){
     User.findOne({regNumber : req.body.regNumber })
   .then(user => {
     if(user){
@@ -128,7 +128,12 @@ router.post('/getAUser', (req, res) =>{
   }
    
 })
-
+router.get('/results', (req, res) =>{
+  Contestants.findOne()
+  .sort({date :'desc'})
+  .then(contestant => res.json({ success: true,
+     contestantNames: contestant}));
+  });
 
 router.post('/contestantsnames', (req, res) =>{
 if(req.user.isAdmin){
@@ -139,8 +144,21 @@ if(req.user.isAdmin){
     FourthContestant :  req.body.FourthContestant,
   }
   new Contestants(newContestant).save()
+  .then(cont => {
+    // var names = {
+    //   first : `${cont.FirstContestant}`,
+    //   second : `${cont.SecondContestant}`,
+    //   third : `${cont.ThirdContestant}`,
+    //   fourth : `${cont.FourthContestant}`
+    // }
+    // var jsn = JSON.stringify(names);
     req.flash('success_msg', 'names added');
     res.redirect('/admin');
+  })
+  .catch (err => {
+    console.log(err);
+  })
+  
 }else{
   res.redirect('/');
 }
