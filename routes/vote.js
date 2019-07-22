@@ -78,9 +78,22 @@ router.get('/', ensureAuthenticated, (req, res) => {
   .then(date =>{
     var begin = new Date(date.votingDate);
     var end = new Date(date.closingDate);
+    let year = [begin.getDate(),   begin.getMonth() + 1,  begin.getFullYear()]
   
      if( new Date() < begin ){
-      res.render ('pre_vote')
+       Contestants.findOne()
+       .sort({date : 'desc'})
+       .then(conts =>{
+        res.render ('pre_vote',{
+          year : begin.getFullYear(),
+          start : year,
+          firstcontestants : conts.FirstContestant,
+          secondcontestants : conts.SecondContestant,
+          thirdcontestants : conts.ThirdContestant,
+          fourthcontestants : conts.FourthContestant
+        })
+       })
+      
     }
   
     else if(  begin <= new Date() && end > new Date() ){

@@ -49,9 +49,27 @@ border: 4px solid yellow;
   margin-top: 20px;
 }
 .dropdown{
-  z-index: 2
-}
+  z-index: 2;
+  }
 
 #buttonCollapse{
   cursor: cell;
+}
+
+.sectionPre_vote{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.329),rgba(0, 0, 0, 0.1)),url('/img/Lighthouse.jpg');
+  /* background-image: url('/img/Lighthouse.jpg' ); */
+  position: relative;
+  background-size:cover;
+  
+}
+.H51{
+  line-height: 28px;
+  margin-left: 10px;
+  letter-spacing: 2px;
+  color:  white;
+}
+.section3{
+  display:  flex;
+  justify-content: space-around;
 }

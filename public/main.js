@@ -10,18 +10,17 @@
 
  function getContestants(){
      var xhr = new XMLHttpRequest();
-     xhr.open('GET', contestantsNamesFetchingApi.productionApi, true);
+     xhr.open('GET', contestantsNamesFetchingApi.LocalhostApi, true);
 
      xhr.onload = function(){
          if(this.status == 200){
 var data =JSON.parse(this.responseText);
-// console.log(data.contestantNames.FirstContestant)
   var first = data.contestantNames.FirstContestant;
   var second = data.contestantNames.SecondContestant;
   var third = data.contestantNames.ThirdContestant;
   var fourth = data.contestantNames.FourthContestant;
 
-  fetch(votesFetctingApi.productionApi)
+  fetch(votesFetctingApi.LocalhostApi)
   .then(res => res.json())
   .then(data => {
     const votes = data.Votes;

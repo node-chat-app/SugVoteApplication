@@ -1,24 +1,128 @@
-      <div class="row">
-        <div class="col-3" > <img class="aboutImg" src=" /img/vote.jpg" width="150"></div>
-        <div class="col-9"><h3 class="pl-4 text-danger about" >2019/2020 IMOPOLY SUG PRESIDENTIAL ELECTION</h3></div>
+<div class="well">
+        <div class ="mt-0"><h3 class="blue-text mt-0" >{{year}}  IMOPOLY SUG PRESIDENTIAL ELECTION</h3></div>
+</div>
+<section class="sectionPre_vote">
+  <div style="display:flex; justify-contents:space-around">
+       <img src=" /img/vote.jpg" width="150">
+ <h5 class="H51">
+      Welcome {{user.name}} to the {{year}}  IMOPOLY SUG PRESIDENTIAL ELECTION, The School managegement has scheduled the election 
+      to start {{start}}. So always be at alert when nthe date reaches so you can cast your vote as a valid voter. the process 
+      will be carried out within a space of three days and the winner will be announce once the process finishes. 
+      Four qualified candidate will be contesting for this year's sug president. to know their details <span class="text-danger">
+        click the botton down below.
+      </span> 
+  </h5>
+  <hr>
+  </div> 
+   <button class="btn  mt-2 " type="button" data-toggle="collapse"
+   data-target=".multi-collapse" aria-expanded="false"
+   aria-controls="multiCollapseExample1 multiCollapseExample2"><ion-icon name="power"></ion-icon><span class="aspirantsInformationButton">  Aspirants information</span></button>
+</section>
+<section class="section2">
+  <div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body bg-primary">
+       <div class="row">
+         <div class="col-4"><img src="/img/first.jpg" width="40" height="40"></div>
+         <div class="col-8">{{firstcontestants}}</div>
+       </div>
+       <ul >
+         <li>State of origin : Abia state</li>
+         <li>Department      : Statistics</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 3.33</li>
+         <LI>Religion  : Christianity</LI>
+       </ul>
       </div>
-      
-     
-      <p class="center">
-        <marquee class="text-success" width="50%" >LOGIN WITH THE PASSWORD SENT TO YOUR PHONE AND YOUR REGISTRATION NUMBER AND VOTE FOR THE NEXT SUG PRESIDENT</marquee>
-      </p>
-      <p class="lead text-info aboutP" >To be able cast your vote and decide your choice on who you wants to be the 
-        next SUG PRESIDENT of Imo State Polytechnic for the 2018/2019 academic session you have to login your 
-        credential/details which include your department, your registration number and your password that was 
-        sent to your email or phone number so as to clerify that you are a student of the institution.
-      Remember you can only vote once.
-       you can also remove your vote if you choose to, provided
-         that you have voted before.
-         your vote counts vote wisely
-      </p>
-      <hr class="my-2">
-    
-      <p class="lead">
-        <a class="btn-info btn-lg" href="/" role="button">Home</a>
-      </p>
-  
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body bg-info">
+        <div class="row">
+         <div class="col-4"><img src="/img/second.jpg" width="40" height="40"></div>
+         <div class="col-8">{{secondcontestants}}</div>
+       </div>
+        
+       <ul>
+         <li>State of origin : Imo state</li>
+         <li>Department      : Computer science</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 3.56</li>
+         <LI>Religion  : Christianity</LI>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body  bg-success">
+         <div class="row">
+         <div class="col-4"><img src="/img/third.jpg" class="display-inline" width="40" height="40"></div>
+         <div class="col-8">{{thirdcontestants}}</div>
+       </div>
+       
+       <ul>
+         <li>State of origin : Edo state</li>
+         <li>Department      : Animal science</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 4.0</li>
+         <LI>Religion  : Christianity</LI>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body  bg-danger">
+        <div class="row">
+         <div class="col-4"><img src="/img/fourth.jpg" class="display-inline" width="40" height="40"></div>
+         <div class="col-8">{{fourthcontestants}}</div>
+       </div>
+       
+       <ul>
+         <li>State of origin : Kano state</li>
+         <li>Department      : Statistics</li>
+         <li>Level   :  HND1</li>
+         <li>Current GPA : 3.89</li>
+         <LI>Religion  : Muslem</LI>
+       </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="section3">
+  <img src="/img/vote2.jpg">
+  <img class="ml-2" src="/img/img5.jpg">
+  <img class="ml-2" src="/img/vote2.jpg">
+</section>
+
+
+</main>
+
+
+<footer class="page-footer brown darken-3 mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">VotingApllication</h5>
+        <p class="grey-text text-lighten-4">your vote is your power</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="green-text"><a href="/vote">VOTE</a></h5>
+        <ul>
+          <li><a class="blue-text text-lighten-3" href="https://youtube.com"><i class="fa fa-address-book-o" aria-hidden="true">youtube</i></a></li>
+          <li><a class="grey-text text-lighten-3" href="https://facebook.com"><i class="fa fa-facebook" aria-hidden="true">facebook</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      online votePollApplication votePollApp developed by George Nwagbara a.k.a BlackHandsome
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
